@@ -1,9 +1,10 @@
 #include<iostream>
 #include<fstream>
 #include<string>
-#include<cstdlib>
+#include<cstdlib>  //for the exit(0) function
 using namespace std;
-void display(int n);
+void display(int n);  //prototype declared
+//main() function
 int main()
 {
     int get;
@@ -21,18 +22,18 @@ int main()
         {
         case 1:
             cout << "The good boys are:\n";
-            display(1);
+            display(1);   //display the content with parameter 1
             break;
         case 2:
             cout << "The bad boys are:\n";
-            display(2);
+            display(2);  //display the content with parameter 2
             break;
         case 3:
             cout << "The average boys are:\n";
-            display(3);
+            display(3); //display the content with parameter 3
             break;
         case 4:
-            exit(0);
+            exit(0);   // the exit function
             break;
         default:
             cout << "Wrong choice\n";
@@ -41,18 +42,19 @@ int main()
         cout << "Do you want to see any other criteria?(Y/N)\n";
         cin >> y;
     }
-    while(y=='Y' || y=='y');
+    while(y=='Y' || y=='y');  //continue the loop till user presses y
     return 0;
 }
+//display() function
 void display(int n)
 {
     char x;
     string name;
-    ifstream read("C:/Documents and Settings/Administrator/My Documents/Data file Handling/sahil.txt");
+    ifstream read("C:/Documents and Settings/Administrator/My Documents/Data file Handling/sahil.txt"); 
     switch(n)
     {
     case 1:
-        while(read >> name >> x)
+        while(read >> name >> x)  // read data from sahil.txt
         {
            if(x=='g')
            {
