@@ -81,4 +81,5 @@ void display(int n)
         }
         break;
     }
+    read.close();
 }
